@@ -9,7 +9,7 @@ function About() {
   return (
     <Container>
       <HeaderSection />
-      <MainContent />
+      {/* <MainContent /> */}
       <AwardsSection />
     </Container>
   );

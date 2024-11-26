@@ -28,14 +28,18 @@ function AwardsSection() {
 
 const Awards = styled.div`
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  padding: 20px;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
 `;
 
 const Slot = styled.div`
-  width: 19%;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -45,8 +49,7 @@ const Slot = styled.div`
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: relative;
-  margin: 20px;
-  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   &:hover {
     border: 1px solid #fff;
@@ -56,55 +59,39 @@ const Slot = styled.div`
       rgb(0 0 0 / 73%) 0px 16px 10px -10px;
   }
 
-  @media only screen and (max-width: 1200px) {
-    width: 43%;
-    margin: 10px;
-    text-align: center;
-    height: 220px;
+  @media only screen and (max-width: 768px) {
+    height: 200px;
   }
 `;
 
 const Upper = styled.div`
-  width: 39%;
-  height: 65%;
+  width: 50%;
+  height: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @media only screen and (max-width: 1200px) {
-    height: 60%;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-
   img {
-    width: 40%;
+    width: 100%;
   }
 `;
 
 const Down = styled.div`
   height: 40%;
   width: 100%;
-  padding: 5px 15px;
+  padding: 10px;
   background: #fff;
   opacity: 0.8;
   border-radius: 8px;
-
-  @media only screen and (max-width: 1200px) {
-    height: 100%;
-    opacity: 0.7;
-  }
+  text-align: center;
 
   h1 {
     color: black;
     font-size: 14px;
     margin: 5px 0;
-    text-align: center;
     letter-spacing: 1.2px;
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 768px) {
       font-size: 12px;
     }
   }
