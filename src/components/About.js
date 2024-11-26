@@ -1,18 +1,16 @@
 // File: About.js
 import React from "react";
 import styled from "styled-components";
-import LazyImage from "./LazyImage";
-import Vision from "./Vision";
 import HeaderSection from "./HeaderSection";
-import BodySection from "./BodySection";
-// import FooterSection from "./FooterSection";
+import MainContent from "./MainContent";
+// import AwardsSection from "./AwardsSection";
 
 function About() {
   return (
     <Container>
       <HeaderSection />
-      <BodySection />
-      {/* <FooterSection /> */}
+      <MainContent />
+      {/* <AwardsSection /> */}
     </Container>
   );
 }
