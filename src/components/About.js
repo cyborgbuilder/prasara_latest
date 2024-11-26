@@ -475,31 +475,22 @@ const Slot = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
   align-items: center;
-
-  background-size: cover;
-
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  position: relative;
   margin: 20px;
-  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  transition: transform 250ms;
+  text-align: center;
 
   &:hover {
-    border: 1px solid #fff;
-    cursor: pointer;
     transform: scale(1.01);
-    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
-      rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    box-shadow: 0px 26px 30px rgba(0, 0, 0, 0.1),
+      0px 16px 10px rgba(0, 0, 0, 0.1);
   }
 
-  @media only screen and (max-width: 1200px) {
-    width: 43%;
-
+  @media only screen and (max-width: 768px) {
+    width: 45%; /* Adjust slot width */
+    height: 220px; /* Reduced height */
     margin: 10px;
-    text-align: center;
-    height: 220px;
   }
 `;
 
