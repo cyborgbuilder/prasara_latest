@@ -20,9 +20,8 @@ function VideoPage() {
   };
 
   useEffect(() => {
-    // Add an event listener to track window width changes
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1200); // Update isMobile state based on the breakpoint
+      setIsMobile(window.innerWidth <= 1200);
     };
 
     window.addEventListener('resize', handleResize);
