@@ -3,14 +3,14 @@ import React from "react";
 import styled from "styled-components";
 import HeaderSection from "./HeaderSection";
 import MainContent from "./MainContent";
-// import AwardsSection from "./AwardsSection";
+import AwardsSection from "./AwardsSection";
 
 function About() {
   return (
     <Container>
       <HeaderSection />
       <MainContent />
-      {/* <AwardsSection /> */}
+      <AwardsSection />
     </Container>
   );
 }
