@@ -15,11 +15,11 @@ function BodySection() {
         </Header>
         <Title>
           <h1>Who are we</h1>
-          <div className="loader">
+          {/* <div className="loader">
             {Array.from({ length: 7 }).map((_, i) => (
               <div key={i} className="loader-square"></div>
             ))}
-          </div>
+          </div> */}
         </Title>
 
         <Header>
@@ -62,11 +62,11 @@ function BodySection() {
 
         <Title>
           <h1>Operating Ethically</h1>
-          <div className="loader">
+          {/* <div className="loader">
             {Array.from({ length: 7 }).map((_, i) => (
               <div key={i} className="loader-square"></div>
             ))}
-          </div>
+          </div> */}
         </Title>
 
         <Vision />
