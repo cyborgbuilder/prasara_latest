@@ -438,7 +438,7 @@ const Upper = styled.div`
   }
 
   img {
-    width: 40%;
+    width: 90%;
   }
 `;
 
