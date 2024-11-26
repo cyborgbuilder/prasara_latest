@@ -4,15 +4,15 @@ import styled from "styled-components";
 import LazyImage from "./LazyImage";
 import Vision from "./Vision";
 import HeaderSection from "./HeaderSection";
-// import BodySection from "./BodySection";
+import BodySection from "./BodySection";
 // import FooterSection from "./FooterSection";
 
 function About() {
   return (
     <Container>
       <HeaderSection />
-      {/* <BodySection />
-      <FooterSection /> */}
+      <BodySection />
+      {/* <FooterSection /> */}
     </Container>
   );
 }
