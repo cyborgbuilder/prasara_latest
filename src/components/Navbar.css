@@ -48,8 +48,9 @@ header .conButton:hover{
 }
 
 nav a {
-	margin-left: 0.6rem;
+	margin-left: 1.2rem;
 	font-size: 20px;
+	font-weight: 400;
 	color: var(--textColor);
 	text-decoration: none;
     list-style-type: none;

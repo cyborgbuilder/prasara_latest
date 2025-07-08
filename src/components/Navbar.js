@@ -1,58 +1,62 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 import { Link } from 'react-router-dom';
 
 function Navbar() {
 	const navRef = useRef();
+	const [show, setShow] = useState(false);
 
-	const showNavbar = () => {
-		navRef.current.classList.toggle("responsive_nav");
-	};
+	// Show/hide mobile nav
+	const toggleNavbar = useCallback(() => {
+		if (navRef.current) {
+			navRef.current.classList.toggle("responsive_nav");
+		}
+	}, []);
 
-	const [show, handleShow] = useState(false);
+	// Scroll event handler
+	const handleScroll = useCallback(() => {
+		setShow(window.scrollY > 100);
+	}, []);
 
-    const trasnitionNavBar = () => {
-        if (window.scrollY > 100){
-            handleShow(true);
-        }else {
-            handleShow(false);
-        }
-    }
-
-
-    useEffect(() => {
-        window.addEventListener("scroll", trasnitionNavBar);
-        return () => window.removeEventListener("scroll", trasnitionNavBar)
-    }, [])
+	// Attach scroll listener
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, [handleScroll]);
 
 	return (
-		<header className={`nav ${show && "nav_white"}` }>
-			<img src="./logo2.png" />
-			<div>
-			<nav ref={navRef}>
-				
-				<Link to='/'><a onClick={showNavbar} >Home</a></Link>
-				<Link to='/brands'><a onClick={showNavbar}>Brands</a></Link>
-				<Link to='/about'><a onClick={showNavbar}>About Us</a></Link>		
-				<Link to='/sustainability'><a onClick={showNavbar}>Sustainability</a></Link>
-				{/* <Link to='/production'><a>Productions</a></Link> */}
-				
-				<Link to='/contact'><button onClick={showNavbar} className="button-89" href="/Contact">Contact Us</button></Link>
+		<header className={`nav ${show ? "nav_white" : ""}`}>
+			<img src="./logo2.webp" alt="Company Logo" />
+			<nav ref={navRef} role="navigation" aria-label="Main Navigation">
+				<Link to="/" onClick={toggleNavbar}>Home</Link>
+				<Link to="/brands" onClick={toggleNavbar}>Brands</Link>
+				<Link to="/about" onClick={toggleNavbar}>About Us</Link>
+				<Link to="/sustainability" onClick={toggleNavbar}>Sustainability</Link>
+				<Link to="/contact">
+					<button className="button-89" onClick={toggleNavbar}>
+						Contact Us
+					</button>
+				</Link>
 				<button
 					className="nav-btn nav-close-btn"
-					onClick={showNavbar}>
+					onClick={toggleNavbar}
+					aria-label="Close navigation menu"
+				>
 					<FaTimes />
 				</button>
 			</nav>
 			<span>
-			<button className="nav-btn" onClick={showNavbar}>
-				<FaBars />
-			</button>
+				<button
+					className="nav-btn"
+					onClick={toggleNavbar}
+					aria-label="Open navigation menu"
+				>
+					<FaBars />
+				</button>
 			</span>
-			</div>
 		</header>
 	);
 }
 
-export default Navbar
+export default Navbar;
