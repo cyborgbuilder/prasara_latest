@@ -11,7 +11,7 @@ function Footer() {
       <Up>
       <Wrap>
       <Section>
-        <img src='logo1.jpg' />
+        <img src='logo1.webp' />
 
         <h4>Prasara Washing Plant Dankotuwa (Pvt) Ltd</h4>
         <p>Negombo road</p>

@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Vision from "./Vision";
 function About() {
-  const imgurl = "./award.png";
+  const imgurl = "./award.webp";
   return (
     <Container>
       <Head>
         <div></div>
-        <img src="about3.jpg" alt="Welcome" />
+        <img src="about3.webp" alt="Welcome" />
       </Head>
       <Body>
         <Wrap>

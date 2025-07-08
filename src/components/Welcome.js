@@ -13,7 +13,7 @@ function Welcome() {
 
            <div>
            <LazyImage
-            src="./main2.jpg"
+            src="./main2.webp"
             blurhash="LaI}q+W?_N-;%gRjRjxus.kCIoWA"
             alt="Welcome"
           />
@@ -53,8 +53,10 @@ const Left = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url('./main.jpg');
+    background: url('./main__1.webp');
+    background-size: cover;
     padding: 20px;
+    z-index: 100;
 
     @media only screen and (max-width: 1200px){
         width: 100%;
