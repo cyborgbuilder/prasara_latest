@@ -14,95 +14,95 @@ CERTIFICATIONS</h1>
         <Right>
         <Slot>
         <LazyImage
-            src="./1.png"
+            src="./1.webp"
             blurhash="L071l@_300IU00IU9FM{00D%%M-;"
             alt=""
           />
-          {/* <img src='./1.png' /> */}
+          {/* <img src='./1.webp' /> */}
         </Slot>
         <Slot>
         <LazyImage
-            src="./2.png"
+            src="./2.webp"
             blurhash="L071l@_300IU00IU9FM{00D%%M-;"
             alt=""
           />
-        {/* <img src='./2.png' /> */}
+        {/* <img src='./2.webp' /> */}
         </Slot>
         <Slot>
         <LazyImage
-            src="./3.png"
+            src="./3.webp"
             blurhash="L071l@_300IU00IU9FM{00D%%M-;"
             alt=""
           />
-        {/* <img src='./3.png' /> */}
+        {/* <img src='./3.webp' /> */}
         </Slot>
         <Slot>
         <LazyImage
-            src="./4.png"
+            src="./4.webp"
             blurhash="L071l@_300IU00IU9FM{00D%%M-;"
             alt=""
           />
-        {/* <img src='./4.png' /> */}
+        {/* <img src='./4.webp' /> */}
         </Slot>
         <Slot>
         <LazyImage
-            src="./5.png"
+            src="./5.webp"
             blurhash="L071l@_300IU00IU9FM{00D%%M-;"
             alt=""
           />
-        {/* <img src='./5.png' /> */}
+        {/* <img src='./5.webp' /> */}
         </Slot>
         <Slot>
         <LazyImage
-            src="./6.png"
+            src="./6.webp"
             blurhash="L071l@_300IU00IU9FM{00D%%M-;"
             alt=""
           />
-        {/* <img src='./6.png' /> */}
+        {/* <img src='./6.webp' /> */}
         </Slot>
         <Slot>
         <LazyImage
-            src="./7.png"
+            src="./7.webp"
             blurhash="L071l@_300IU00IU9FM{00D%%M-;"
             alt=""
           />
-        {/* <img src='./7.png' /> */}
+        {/* <img src='./7.webp' /> */}
         </Slot>
         <Slot>
         <LazyImage
-            src="./12.png"
+            src="./12.webp"
             blurhash="L071l@_300IU00IU9FM{00D%%M-;"
             alt=""
           />
-        {/* <img src='./12.png' /> */}
+        {/* <img src='./12.webp' /> */}
         </Slot>
         <Slot>
         <LazyImage
-            src="./8.png"
+            src="./8.webp"
             blurhash="L071l@_300IU00IU9FM{00D%%M-;"
             alt=""
           />
-        {/* <img src='./8.png' /> */}
+        {/* <img src='./8.webp' /> */}
         </Slot>
         <Slot>
         <LazyImage
-            src="./9.png"
+            src="./9.webp"
             blurhash="L071l@_300IU00IU9FM{00D%%M-;"
             alt=""
           />
-        {/* <img src='./9.png' /> */}
+        {/* <img src='./9.webp' /> */}
         </Slot>
         <Slot>
         
-        <img src='./10.png' />
+        <img src='./10.webp' />
         </Slot>
         <Slot>
         <LazyImage
-            src="./11.png"
+            src="./11.webp"
             blurhash="L071l@_300IU00IU9FM{00D%%M-;"
             alt=""
           />
-        {/* <img src='./11.png' /> */}
+        {/* <img src='./11.webp' /> */}
         </Slot>
         </Right>
       </Wrap>

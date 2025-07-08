@@ -1,51 +1,52 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 function Feedback() {
   return (
     <Container>
       <Wrap>
         <Left>
-            <h1>Connect with Us</h1>
-            <p>We value your engagement and would love to
-hear from you. <br></br>Thus, inquiries, feedback, or
-requests of exploring potential collaborations
-are quite welcome. Our team of experts is
-ready to assist you and provide the
-information you need.</p>
-            
-            <Link to='/contact'><button className="button-89" >Contact us</button></Link>
+          <h1>Connect with Us</h1>
+          <p>
+            We value your engagement and would love to hear from you. <br></br>
+            Thus, inquiries, feedback, or requests of exploring potential
+            collaborations are quite welcome. Our team of experts is ready to
+            assist you and provide the information you need.
+          </p>
+
+          <Link to="/contact">
+            <button className="button-89">Contact us</button>
+          </Link>
         </Left>
         <Right>
-            {/* <img src='https://static.vecteezy.com/packs/media/components/pricing/pricing-main/img/pricing-hero-800px-b8810bc733a9898472effdd5fe2bc606.jpg' /> */}
-            <img src='./cnnect.png' />
+          {/* <img src='https://static.vecteezy.com/packs/media/components/pricing/pricing-main/img/pricing-hero-800px-b8810bc733a9898472effdd5fe2bc606.jpg' /> */}
+          <img src="./cnnect.webp" />
         </Right>
       </Wrap>
     </Container>
-  )
+  );
 }
 
 const Container = styled.div`
-    width: 100%;
-    min-height: 40vh;
-    background: #f7f9fa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`
+  width: 100%;
+  min-height: 40vh;
+  background: #f7f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 const Wrap = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    border: 1px solid white;
-    padding-left: 30px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border: 1px solid white;
+  padding-left: 30px;
 
-    @media only screen and (max-width: 1200px){
-        flex-direction: column;
-      }
-
-`
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+`;
 const Left = styled.div`
     width: 70%;
     padding-right: 240px;
@@ -83,21 +84,20 @@ const Left = styled.div`
 
     }
 
-`
+`;
 
 const Right = styled.div`
-    width: 30%;
+  width: 30%;
 
-     @media only screen and (max-width: 1200px){
-         margin-top: 20px;
-         width: 100%;
-     }
+  @media only screen and (max-width: 1200px) {
+    margin-top: 20px;
+    width: 100%;
+  }
 
-    img{
-        width: 100%;
-        height: 100%;
-    }
-`
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
 
-export default Feedback
-
+export default Feedback;
