@@ -15,7 +15,7 @@ function Contact() {
       <Head>
         <div></div>
         <LazyImage
-            src="./contact.png"
+            src="./contact.webp"
             blurhash="LEGlS6WB3Fovu6n%n$R*?uofIAjF"
             alt=""
           />
