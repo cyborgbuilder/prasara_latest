@@ -38,100 +38,100 @@ function VideoPage() {
 <Slider className='img_slider' {...settings}>
           <div>
           {isMobile ? (
-            <LazyImage src="./coverM1.jpg" 
+            <LazyImage src="./coverM1.webp" 
             blurhash="L5BVV6}]0NI.,~M^E7%L0WX8=vrr"
             alt=""
             />
           ) : (
-            <LazyImage src="./cover1.png" 
+            <LazyImage src="./cover1.webp" 
             blurhash="LDBLu716E+}mAV%1nhSwIqIoSejG"
             alt="" />
           )}
           </div>
           <div>
           {isMobile ? (
-            <LazyImage src="./coverM2.jpg" 
+            <LazyImage src="./coverM2.webp" 
             blurhash="LKHn:FRi4ot2~p%KR:M_00%Lx]IU"
             alt=""  />
           ) : (
-            <LazyImage src="./cover2.png" 
+            <LazyImage src="./cover2.webp" 
             blurhash="LKF~Bl00Iq~o9Z-:MyjD4ntRXSni"
             alt="" />
           )}
           </div>
           <div>
           {isMobile ? (
-            <LazyImage src="./coverM3.jpg" 
+            <LazyImage src="./coverM3.webp" 
             blurhash="LACP;os#RXDhysNCRCt10M-+EOx["
             alt=""  />
           ) : (
-            <LazyImage src="./cover3.png" 
+            <LazyImage src="./cover3.webp" 
             blurhash="L9DcLE00u6.300~oiJX258E0EM?H"
             alt="" />
           )}
           </div>
           <div>
           {isMobile ? (
-            <LazyImage src="./coverM4.jpg" 
+            <LazyImage src="./coverM4.webp" 
             blurhash="L3C5}7E800_29q,k0o${02.2uPQ-"
             alt=""  />
           ) : (
-            <LazyImage src="./cover4.png" 
+            <LazyImage src="./cover4.webp" 
             blurhash="L5A+]l06-U~AOu$^EN^d00KKSiMx"
             alt="" />
           )}
           </div>
           <div>
           {isMobile ? (
-            <LazyImage src="./coverM5.jpg" 
+            <LazyImage src="./coverM5.webp" 
             blurhash="LiCtFex^9Fa0.TXRMys9jJV=ogoz"
             alt=""  />
           ) : (
-            <LazyImage src="./cover5.png" 
+            <LazyImage src="./cover5.webp" 
             blurhash="LQBq3+8wMd?^X:iunjXlDib^o~Vq"
             alt="" />
           )}
           </div>
           <div>
           {isMobile ? (
-            <LazyImage src="./coverM6.jpg" 
+            <LazyImage src="./coverM6.webp" 
             blurhash="LEDc5z4nJ6x;yXR*RQov00_NM{ic"
             alt=""  />
           ) : (
-            <LazyImage src="./cover6.png" 
+            <LazyImage src="./cover6.webp" 
             blurhash="L8C6iu00_N?G0e_38_%e00%$ITNF"
             alt="" />
           )}
           </div>
           <div>
           {isMobile ? (
-            <LazyImage src="./coverM7.jpg" 
+            <LazyImage src="./coverM7.webp" 
             blurhash="L8D+un%d0mmk?]tLa6f#00%0VXyX"
             alt=""  />
           ) : (
-            <LazyImage src="./cover7.png" 
+            <LazyImage src="./cover7.webp" 
             blurhash="L9CY|700I^~85k%MrVb^0KOXJ+xb"
             alt="" />
           )}
           </div>
           <div>
           {isMobile ? (
-            <LazyImage src="./coverM8.jpg" 
+            <LazyImage src="./coverM8.webp" 
             blurhash="LSGuB.0f9H-l_NM^IXt20=^gV]Ip"
             alt=""  />
           ) : (
-            <LazyImage src="./cover8.png" 
+            <LazyImage src="./cover8.webp" 
             blurhash="LMD+i900~BXlKl#iEO%K0M?ZE2kW"
             alt="" />
           )}
           </div>
           <div>
           {isMobile ? (
-            <LazyImage src="./coverM9.jpg" 
+            <LazyImage src="./coverM9.webp" 
             blurhash="LmI5ojITD*oH?wR$IVxs9HtONKoy"
             alt=""  />
           ) : (
-            <LazyImage src="./cover9.png" 
+            <LazyImage src="./cover9.webp" 
             blurhash="LLGb-x00tT_MbyoYMf.69HtPIqxs"
             alt="" />
           )}
