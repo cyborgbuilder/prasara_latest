@@ -8,7 +8,7 @@ function About() {
       <Head>
         <div></div>
         <LazyImage
-            src="./brands.png"
+            src="./brands.webp"
             blurhash="LPMQt}xvp_ay?^WBVYWBOYkCVrs:"
             alt="Welcome"
           />
@@ -269,7 +269,7 @@ function About() {
 
             <Slot>
                 <Upper>
-                    <img className='logo_14' src='gerry.png' />
+                    <img className='logo_14' src='gerry.webp' />
                 </Upper>
                 <Down>
                     <h1>Gerry Weber</h1>
@@ -289,7 +289,7 @@ function About() {
 
             <Slot>
                 <Upper>
-                    <img className='logo_27' src='./george.png' />
+                    <img className='logo_27' src='./george.webp' />
                 </Upper>
                 <Down>
                     <h1>George</h1>
@@ -352,7 +352,7 @@ function About() {
 
             <Slot>
                 <Upper>
-                    <img className='logo_30' src='osh.png' />
+                    <img className='logo_30' src='osh.webp' />
                 </Upper>
                 <Down>
                     <h1>Oshkosh B'gosh</h1>
@@ -372,7 +372,7 @@ function About() {
 
             <Slot>
                 <Upper>
-                    <img className='logo_33' src='./seasalt.jpg' />
+                    <img className='logo_33' src='./seasalt.webp' />
                 </Upper>
                 <Down>
                     <h1>Seasalt Cornwall</h1>

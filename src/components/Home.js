@@ -36,7 +36,7 @@ function Home() {
 
 
 const Container = styled.div`
-  iwdth: 100%;
+  width: 100%;
   overflow: hidden;
 
 `
