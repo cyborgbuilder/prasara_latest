@@ -7,9 +7,14 @@ import { FaInstagram } from "react-icons/fa";
 function SocialBooth() {
   return (
     <Container>
-      <FaFacebook className='icons' />
+      <a href='https://www.facebook.com/people/Prasara-Washing/pfbid02cA9U3QMVFWA4ZF5CMenG4PsNnXwD7tjwgDRjPJFFNXu2jbyjQ4Jdpgi8Qxiu2NH4l/' target='_blank' >
+      <FaFacebook  className='icons' />
+      </a>
+
+      <a href='https://www.youtube.com/@prasarawashing' target='_blank' >
       <FaYoutube className='icons' />
-      <FaInstagram className='icons' />
+      </a>
+      {/* <FaInstagram className='icons' /> */}
     </Container>
   )
 }

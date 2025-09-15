@@ -186,7 +186,7 @@ function About() {
 
             <Slot>
                 <Upper>
-                    <img className='logo_34' src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/1280px-Walmart_logo.svg.png' />
+                    <img className='logo_34' src='https://upload.wikimedia.org/wikipedia/commons/5/5b/Walmart_logo_%282025%29.svg' />
                 </Upper>
                 <Down>
                     <h1>Walmart</h1>
@@ -259,7 +259,7 @@ function About() {
 
             <Slot>
                 <Upper>
-                    <img className='logo_11' src='https://www.logolynx.com/images/logolynx/5c/5c9b27f6b72e469d906de452323197f6.png' />
+                    <img className='logo_11' src='https://upload.wikimedia.org/wikipedia/commons/0/02/Eddie_Bauer_logo.svg' />
                 </Upper>
                 <Down>
                     <h1>Eddie Bauer</h1>
@@ -393,7 +393,7 @@ function About() {
             
             <Slot>
                 <Upper>
-                    <img className='logo_29' src='https://1000logos.net/wp-content/uploads/2022/08/Old-Navy-Logo-2005.png' />
+                    <img className='logo_29' src='https://upload.wikimedia.org/wikipedia/commons/d/d3/Old_Navy_Logo.svg' />
                 </Upper>
                 <Down>
                     <h1>Old Navy</h1>
