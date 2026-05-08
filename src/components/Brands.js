@@ -1,8 +1,66 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom';
 import LazyImage from './LazyImage';
-function About() {
+
+const brands = [
+    { name: 'Disney', src: 'https://www.pngall.com/wp-content/uploads/2018/05/Disney-Logo-PNG-Pic.png' },
+    { name: 'lululemon', src: 'https://logos-download.com/wp-content/uploads/2016/08/Lululemon_logo.png' },
+    { name: 'Polo', src: 'https://logowik.com/content/uploads/images/731_poloralphlauren.jpg' },
+    { name: 'Tommy Hilfiger', src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tommy_hilfig_vectorlogo.svg' },
+    { name: "Victoria's Secret", src: 'https://logos-world.net/wp-content/uploads/2020/05/Victoria-Secret-Logo.png' },
+    { name: 'amazon', src: 'https://pngimg.com/uploads/amazon/amazon_PNG7.png' },
+    { name: 'Calvin Klein', src: 'https://logos-world.net/wp-content/uploads/2020/05/Calvin-Klein-Logo.png' },
+    { name: 'Van Heusen', src: 'https://logos-download.com/wp-content/uploads/2018/08/Van_Heusen_logo_fasion.png' },
+    { name: 'Guess', src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Guess_logo.svg' },
+    { name: 'asos', src: 'https://download.logo.wine/logo/ASOS_(retailer)/ASOS_(retailer)-Logo.wine.png' },
+    { name: "Levi's", src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Levi%27s_logo.svg' },
+    { name: 'Dockers', src: 'https://logos-world.net/wp-content/uploads/2020/12/Dockers-Logo-2005-2018.png' },
+    { name: 'H & M', src: 'https://logos-download.com/wp-content/uploads/2016/04/HM_logo_logotype_emblem.png' },
+    { name: 'Abercrombie and Fitch', src: 'https://logos-world.net/wp-content/uploads/2022/11/Abercrombie-and-Fitch-Emblem.png' },
+    { name: 'ATG', src: 'https://seeklogo.com/images/A/atg-glove-logo-FFE6E3D9F9-seeklogo.com.png' },
+    { name: 'Tesco', src: 'https://download.logo.wine/logo/Tesco/Tesco-Logo.wine.png' },
+    { name: 'Walmart', src: 'https://upload.wikimedia.org/wikipedia/commons/5/5b/Walmart_logo_%282025%29.svg' },
+    { name: 'Nike', src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Logo_NIKE.svg' },
+    { name: 'Adidas', src: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png' },
+    { name: 'FILA', src: 'https://logos-world.net/wp-content/uploads/2020/09/Fila-Logo.png' },
+    { name: 'Hurley', src: 'https://download.logo.wine/logo/Hurley_International/Hurley_International-Logo.wine.png' },
+    { name: 'Columbia', src: 'https://1000logos.net/wp-content/uploads/2020/03/Columbia-logo.png' },
+    { name: 'Patagonia', src: 'https://www.pngmart.com/files/23/Patagonia-Logo-PNG-HD.png' },
+    { name: 'Eddie Bauer', src: 'https://upload.wikimedia.org/wikipedia/commons/0/02/Eddie_Bauer_logo.svg' },
+    { name: 'Gerry Weber', src: './gerry.webp' },
+    { name: 'next', src: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Next_2007-_logo.svg/2560px-Next_2007-_logo.svg.png' },
+    { name: 'George', src: './george.webp' },
+    { name: "macy's", src: 'https://upload.wikimedia.org/wikipedia/commons/a/a0/Macy%27s_Logo_2019.png' },
+    { name: 'Marks and Spencer', src: 'https://1000logos.net/wp-content/uploads/2022/08/Marks-Spencer-logo.jpg' },
+    { name: 'American Eagle', src: 'https://1000logos.net/wp-content/uploads/2020/06/American-Eagle-Logo-1985.jpg' },
+    { name: 'Jack Wills', src: 'https://seeklogo.com/images/J/jack-wills-logo-7BFF210F7E-seeklogo.com.png' },
+    { name: 'Walbusch', src: 'https://logovectorseek.com/wp-content/uploads/2021/10/walbusch-walter-busch-gmbh-und-co-kg-logo-vector.png' },
+    { name: "Oshkosh B'gosh", src: './osh.webp' },
+    { name: 'L.L. Bean', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/L.L.Bean_wordmark.svg/1024px-L.L.Bean_wordmark.svg.png' },
+    { name: 'Seasalt Cornwall', src: './seasalt.webp' },
+    { name: 'G A P', src: 'https://logos-world.net/wp-content/uploads/2020/09/Gap-Logo.png' },
+    { name: 'Old Navy', src: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Old_Navy_Logo.svg' },
+    { name: "Land's end", src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/LandsEnd_Logo.svg/1280px-LandsEnd_Logo.svg.png' },
+];
+
+function BrandLogo({ brand }) {
+    const [hasError, setHasError] = useState(false);
+
+    if (hasError) {
+        return <FallbackLogo>{brand.name}</FallbackLogo>;
+    }
+
+    return (
+        <img
+            src={brand.src}
+            alt={`${brand.name} logo`}
+            loading="lazy"
+            onError={() => setHasError(true)}
+        />
+    );
+}
+
+function Brands() {
   return (
     <Container>
       <Head>
@@ -15,7 +73,7 @@ function About() {
       </Head>
       <Body>
            <Header>
-           <h1>Brands</h1>
+           <h1 style={{marginTop: "80px"}}>Brands</h1>
            
            </Header>
 
@@ -24,444 +82,13 @@ function About() {
            </Detail> */}
 
            <Wrap>
-           <Slot>
-                <Upper>
-                    <img className='logo_24' src='https://www.pngall.com/wp-content/uploads/2018/05/Disney-Logo-PNG-Pic.png' />
-                </Upper>
-                <Down>
-                    <h1>Disney</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-           <Slot>
-                <Upper>
-                    <img className='logo_24' src='https://logos-download.com/wp-content/uploads/2016/08/Lululemon_logo.png' />
-                </Upper>
-                <Down>
-                    <h1>lululemon</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_32' src='https://logowik.com/content/uploads/images/731_poloralphlauren.jpg' />
-                </Upper>
-                <Down>
-                    <h1>Polo</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_35' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Tommy_Hilfiger_Logo.png/2560px-Tommy_Hilfiger_Logo.png' />
-                </Upper>
-                <Down>
-                    <h1>Tommy Hilfiger</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_37' src='https://logos-world.net/wp-content/uploads/2020/05/Victoria-Secret-Logo.png' />
-                </Upper>
-                <Down>
-                    <h1>Victoria's Secret</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_4' src='https://pngimg.com/uploads/amazon/amazon_PNG7.png' />
-                </Upper>
-                <Down>
-                    <h1>amazon</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_8' src='https://logos-world.net/wp-content/uploads/2020/05/Calvin-Klein-Logo.png' />
-                </Upper>
-                <Down>
-                    <h1>Calvin Klein</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_36' src='https://logos-download.com/wp-content/uploads/2018/08/Van_Heusen_logo_fasion.png' />
-                </Upper>
-                <Down>
-                    <h1>Van Huessen</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_15' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Guess_logo.svg/2560px-Guess_logo.svg.png' />
-                </Upper>
-                <Down>
-                    <h1>Guess</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_6' src='https://download.logo.wine/logo/ASOS_(retailer)/ASOS_(retailer)-Logo.wine.png' />
-                </Upper>
-                <Down>
-                    <h1>asos</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_23' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Levis-logo-quer.svg/2560px-Levis-logo-quer.svg.png' />
-                </Upper>
-                <Down>
-                    <h1>Levi's</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_10' src='https://logos-world.net/wp-content/uploads/2020/12/Dockers-Logo-2005-2018.png' />
-                </Upper>
-                <Down>
-                    <h1>Dockers</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_16' src='https://logos-download.com/wp-content/uploads/2016/04/HM_logo_logotype_emblem.png' />
-                </Upper>
-                <Down>
-                    <h1>H & M</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                <img className='logo_2' src='https://logos-world.net/wp-content/uploads/2022/11/Abercrombie-and-Fitch-Emblem.png' />
-                </Upper>
-                <Down>
-                    <h1>Abercrombie and Fitch</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_7' src='https://seeklogo.com/images/A/atg-glove-logo-FFE6E3D9F9-seeklogo.com.png' />
-                </Upper>
-                <Down>
-                    <h1>ATG</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_34' src='https://download.logo.wine/logo/Tesco/Tesco-Logo.wine.png' />
-                </Upper>
-                <Down>
-                    <h1>Tesco</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_34' src='https://upload.wikimedia.org/wikipedia/commons/5/5b/Walmart_logo_%282025%29.svg' />
-                </Upper>
-                <Down>
-                    <h1>Walmart</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_28' src='https://pngimg.com/d/nike_PNG11.png' />
-                </Upper>
-                <Down>
-                    <h1>Nike</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-
-           
-
-            <Slot>
-                <Upper>
-                    <img className='logo_3' src='https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png' />
-                </Upper>
-                <Down>
-                    <h1>Adidas</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_12' src='https://logos-world.net/wp-content/uploads/2020/09/Fila-Logo.png' />
-                </Upper>
-                <Down>
-                    <h1>FILA</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_19' src='https://download.logo.wine/logo/Hurley_International/Hurley_International-Logo.wine.png' />
-                </Upper>
-                <Down>
-                    <h1>Hurley</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_9' src='https://1000logos.net/wp-content/uploads/2020/03/Columbia-logo.png' />
-                </Upper>
-                <Down>
-                    <h1>Columbia</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_31' src='https://www.pngmart.com/files/23/Patagonia-Logo-PNG-HD.png' />
-                </Upper>
-                <Down>
-                    <h1>Patagonia</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_11' src='https://upload.wikimedia.org/wikipedia/commons/0/02/Eddie_Bauer_logo.svg' />
-                </Upper>
-                <Down>
-                    <h1>Eddie Bauer</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_14' src='gerry.webp' />
-                </Upper>
-                <Down>
-                    <h1>Gerry Weber</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_27' src='https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Next_2007-_logo.svg/2560px-Next_2007-_logo.svg.png' />
-                </Upper>
-                <Down>
-                    <h1>next</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_27' src='./george.webp' />
-                </Upper>
-                <Down>
-                    <h1>George</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_25' src='https://upload.wikimedia.org/wikipedia/commons/a/a0/Macy%27s_Logo_2019.png' />
-                </Upper>
-                <Down>
-                    <h1>macy's</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_26' src='https://1000logos.net/wp-content/uploads/2022/08/Marks-Spencer-logo.jpg' />
-                </Upper>
-                <Down>
-                    <h1>Marks and Spencer</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-
-            
-
-            <Slot>
-                <Upper>
-                    <img className='logo_5' src='https://1000logos.net/wp-content/uploads/2020/06/American-Eagle-Logo-1985.jpg' />
-                </Upper>
-                <Down>
-                    <h1>American Eagle</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_20' src='https://seeklogo.com/images/J/jack-wills-logo-7BFF210F7E-seeklogo.com.png' />
-                </Upper>
-                <Down>
-                    <h1>Jack Wills</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_38' src='https://logovectorseek.com/wp-content/uploads/2021/10/walbusch-walter-busch-gmbh-und-co-kg-logo-vector.png' />
-                </Upper>
-                <Down>
-                    <h1>Walbusch</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_30' src='osh.webp' />
-                </Upper>
-                <Down>
-                    <h1>Oshkosh B'gosh</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_21' src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/L.L.Bean_wordmark.svg/1024px-L.L.Bean_wordmark.svg.png' />
-                </Upper>
-                <Down>
-                    <h1>L.L. Bean</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_33' src='./seasalt.webp' />
-                </Upper>
-                <Down>
-                    <h1>Seasalt Cornwall</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_13' src='https://logos-world.net/wp-content/uploads/2020/09/Gap-Logo.png' />
-                </Upper>
-                <Down>
-                    <h1>G A P</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            
-            <Slot>
-                <Upper>
-                    <img className='logo_29' src='https://upload.wikimedia.org/wikipedia/commons/d/d3/Old_Navy_Logo.svg' />
-                </Upper>
-                <Down>
-                    <h1>Old Navy</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-            <Slot>
-                <Upper>
-                    <img className='logo_22' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/LandsEnd_Logo.svg/1280px-LandsEnd_Logo.svg.png' />
-                </Upper>
-                <Down>
-                    <h1>Land's end</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot>
-
-
-
-
-          
-            {/* <Slot>
-                <Upper>
-                    <img className='logo_18' src='https://logos-world.net/wp-content/uploads/2021/01/Helly-Hansen-Logo.png' />
-                </Upper>
-                <Down>
-                    <h1>H / H</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </Down>
-            </Slot> */}
-
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-           
-
-            
-
-            
-
-            
-
-            
-
-            
-           
-
-            
-
-            
-            
-
-            
-
-            
-
-            
-
-            
-
+            {brands.map((brand) => (
+                <Slot key={brand.name} aria-label={`${brand.name} brand logo`}>
+                    <Upper>
+                        <BrandLogo brand={brand} />
+                    </Upper>
+                </Slot>
+            ))}
            </Wrap>
       </Body>
     </Container>
@@ -560,14 +187,14 @@ const Detail = styled.div`
 
 `
 const Slot = styled.div`
-width: 15%;
-height: 200px;
-padding: 15px;
+width: 200px;
+height: 165px;
+padding: 18px;
 background: #FBFCFA;
 border-radius: 8px;
 box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 position: relative;
-margin: 20px;
+margin: 18px;
 transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 
 
@@ -581,11 +208,12 @@ transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 
 
 @media only screen and (max-width: 1200px){
-    width: 40%;
-    padding: 10px;
+    width: 42%;
+    max-width: 200px;
+    padding: 14px;
     margin: 20px 10px;
     text-align: center;
-    height: 180px;
+    height: 145px;
   }
 
 
@@ -608,9 +236,7 @@ const Upper = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
-    jsutify-content: center;
-    //background: url('https://www.pngkit.com/png/detail/21-219040_fila-logo-lambang-fila.png');
-    background-size: cover;
+    justify-content: center;
 
 
     &:hover{
@@ -621,15 +247,34 @@ const Upper = styled.div`
 
     img{
         width: 100%;
+        height: 100%;
+        object-fit: contain;
         border-radius: 5px;
 
         @media only screen and (max-width: 1200px){
-            width: 80%;
+            width: 100%;
 
           }
     }
     
     
+`
+
+const FallbackLogo = styled.span`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sec);
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+
+    @media only screen and (max-width: 1200px){
+        font-size: 16px;
+    }
 `
 
 const Down = styled.div`
@@ -657,4 +302,4 @@ const Down = styled.div`
 
 
 
-export default About
+export default Brands
